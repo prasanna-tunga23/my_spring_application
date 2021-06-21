@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn assemble'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
